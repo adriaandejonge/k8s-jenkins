@@ -1,0 +1,14 @@
+KUBE_TOKEN=$(</var/run/secrets/kubernetes.io/serviceaccount/token)
+curl -sSk -H "Authorization: Bearer $KUBE_TOKEN" https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_PORT_443_TCP_PORT/api/v1beta3/namespaces/default/pods/$HOSTNAME
+
+
+
+curl -O https://storage.googleapis.com/kubernetes-release/release/v1.2.0/bin/linux/amd64/kubectl
+chmod +x kubectl
+mv kubectl /usr/local/bin/kubectl
+
+
+https://get.docker.com/builds/Linux/x86_64/docker-latest
+
+volumes:
+    - /var/run/docker.sock:/var/run/docker.sock

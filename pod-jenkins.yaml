@@ -10,3 +10,4 @@ spec:
     image: jenkinsci/jenkins:2.0-rc-1
     ports:
     - containerPort: 8080
+    - containerPort: 50000

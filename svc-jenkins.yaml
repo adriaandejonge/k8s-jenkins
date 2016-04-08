@@ -4,7 +4,10 @@ metadata:
   name: jenkins
 spec:
   ports:
-    - port: 8080
+  - name: http
+    port: 8080
+  - name: jnlp
+    port: 50000
   selector:
     app: jenkins
   type: LoadBalancer
