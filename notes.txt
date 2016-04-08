@@ -9,6 +9,10 @@ mv kubectl /usr/local/bin/kubectl
 
 
 https://get.docker.com/builds/Linux/x86_64/docker-latest
+chmod +x docker-latest
 
 volumes:
     - /var/run/docker.sock:/var/run/docker.sock
+
+
+https://wiki.jenkins-ci.org/display/JENKINS/Kubernetes+Plugin
