@@ -7,7 +7,13 @@ metadata:
 spec:
   containers:
   - name: jenkins
-    image: jenkinsci/jenkins:2.0-rc-1
+    image: adejonge/jenkins
     ports:
     - containerPort: 8080
     - containerPort: 50000
+    volumeMounts:
+    - name: jenkins-data
+      mountPath: /var/jenkins_home
+  volumes:
+    - name: jenkins-data
+      emptyDir: {}
